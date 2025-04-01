@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #transition-image {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+            opacity: 0;
+            transition: opacity 1s ease;
+            z-index: 1000;
+        }
+        
+        #start-button {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            color: transparent;
+            cursor: default;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <button id="start-button">S</button>
+    <div class="container">
+        <div class="logo">
+            <img src="转像素.jpg" alt="Logo">
+        </div>
+        <div class="content">
+            <h1 id="hi">Hi</h1>
+            <div id="intro-text">
+                <div>Ready For</div>
+                <div>The Best Art</div>
+                <div>Experience</div>
+                <div>This May?</div>
+            </div>
+        </div>
+    </div>
+    <img id="transition-image" src="转像素.jpg" alt="Transition">
+    <audio id="intro-audio" src="intro-audio.mp3" preload="auto" muted></audio>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邀请函</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .invitation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .invitation-text {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <div class="invitation-text">
+            <div class="fade-in" id="text1">YOU</div>
+            <div class="fade-in" id="text2">ARE</div>
+            <div class="fade-in" id="text3">INVITED</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text1 = document.getElementById('text1');
+            const text2 = document.getElementById('text2');
+            const text3 = document.getElementById('text3');
+            
+            // 渐显
+            setTimeout(() => {
+                text1.classList.add('visible');
+                text2.classList.add('visible');
+                text3.classList.add('visible');
+                
+                // 跳转到下一页
+                setTimeout(() => {
+                    window.location.href = 'page4.html';
+                }, 2000);
+            }, 200);
+        });
+    </script>
+</body>
+</html> 
